@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<body>
+
+		<section>
+			<strong>Enter a values:</strong>
+			1- <input type="text" name="number_1" id="number_1" />
+			2- <input type="text" name="number_2" id="number_2" />
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", greater_than);
+
+		function greater_than() {
+			var one  = document.getElementById("number_1").value;
+			var two = document.getElementById("number_2").value;
+
+			if (one > two)
+			{
+				document.getElementById("number_1").value = two;
+				document.getElementById("number_2").value = one;
+				document.getElementById("response").innerHTML = "El valor uno es mayor que el segundo, han sido intercambiados";
+			}
+			else
+				document.getElementById("response").innerHTML = "El valor uno es menor que el segundo";
+		}
+	</script>
+</html>

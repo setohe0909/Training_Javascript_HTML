@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<input type="text" id="digit" /><br>
+		<button onclick="onNameDigit()">Click!</button><br>
+		<div id="response"></div><br>
+	</body>
+	<script>
+	    function onNameDigit() {
+	        var digit = parseInt(document.getElementById("digit").value);
+	        var value;
+	        switch (digit) {
+	            case 1:
+	            	 value = "One"; 
+	            	 break;
+	            case 2: 
+	            	value = "Two"; 
+	            	break;
+	            case 3: 
+	            	value = "Three";
+	            	break;
+	            case 4: 
+	            	value = "Four"; 
+	            	break;
+	            case 5: 
+	            	value = "Five"; 
+	            	break;
+	            case 6: 
+	            	value = "Six";
+	            	 break;
+	            case 7: 
+	            	value = "Seven"; 
+	            	break;
+	            case 8: 
+	            	value = "Eight"; 
+	            	break;
+	            case 9: 
+	            	value = "Nine"; break;
+	            case 0: 
+	            	value = "Zero"; 
+	            	break;
+	            default: value = "Escribir un digito valido"; break;
+	        }
+
+	        document.getElementById("response").innerHTML = value;
+	    }
+	</script>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<div id="response_1"></div>
+		<div id="response_2"></div>
+
+	</body>
+	<script type="text/javascript">
+		
+	    var index;
+	    var array =[2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
+	    var current = 1;
+	    var longest = 1;	
+
+	    for (var i = 0; i < array.length - 1; i++) {
+	        if (array[i + 1] == array[i]) 
+	            current++;
+	        else {
+	            if (longest < current) {
+	                longest = current;
+	                index = i - current + 1;
+	            }
+	            current = 1;
+	        }
+	    }
+
+	    var response = array.slice(index, index + longest);
+
+	    document.getElementById("response_1").innerHTML = 'The longest sequence has ' + longest + ' array';
+	    document.getElementById("response_2").innerHTML ='Position ' + index + ' [' + response + ']';
+	</script>
+</html>

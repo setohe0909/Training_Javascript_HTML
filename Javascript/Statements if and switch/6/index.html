@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	
+		<section>
+			<strong>Enter a values:</strong><br>
+			1- <input type="text" name="number_1" id="number_1" /> <br> 
+			2- <input type="text" name="number_2" id="number_2" /> <br>
+			3- <input type="text" name="number_3" id="number_3" /> <br>
+			4- <input type="text" name="number_3" id="number_4" /> <br>
+			5- <input type="text" name="number_3" id="number_5" /> <br>
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+
+	</body>
+	<script>
+		document.getElementById("btn").addEventListener("click", greatest);
+
+		function greatest(){	
+		    var a = parseInt(document.getElementById("number_1").value);
+		    var b = parseInt(document.getElementById("number_2").value);
+		    var c = parseInt(document.getElementById("number_3").value);
+		    var d = parseInt(document.getElementById("number_4").value);
+		    var e = parseInt(document.getElementById("number_5").value);
+
+		    var chk1 = Math.max(a, b);
+		    var chk2 = Math.max(c, d);
+
+		    if (chk1 > chk2 && chk1 > e)
+		        document.write("La variable mayor es: " + chk1); 
+		    else if (chk2 > chk1 && chk2 > e)
+		        document.write("La variable mayor es: " + chk2);
+		    else
+		        document.write("La variable mayor es: " + e);
+		}
+	</script>
+</html>

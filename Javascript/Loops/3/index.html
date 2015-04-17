@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utef-8">
+	</head>
+	<body>
+	<script type="text/javascript">
+
+	    var numbers = new Array();
+		    numbers[0] = 22;
+		    numbers[1] = 12;
+		    numbers[2] = 2;
+		    numbers[3] = 3;
+		    numbers[4] = 11;
+		    numbers[5] = -22;
+		    numbers[6] = -17;
+		    numbers[7] = 58;
+		    numbers[8] = 10;
+		    numbers[9] = 6;
+
+	    MaxAndMin(numbers);
+
+	    function MaxAndMin(numbers) {
+	        var max = numbers[0];
+	        var min = numbers[0];
+
+	        for (var i = 0; i < numbers.length; i++) {
+
+	            if (max < numbers[i])
+	                max = numbers[i];
+
+	            if (min > numbers[i])
+	                min = numbers[i];
+	        }
+
+	        document.write("numbers: " + "<br>" +numbers + "<br>" +
+	        			   " max = " + max + ", min = " + min);
+		}
+	</script>
+	</body>
+</html>

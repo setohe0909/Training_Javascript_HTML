@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<section>
+				<strong>Enter a values:</strong><br>
+				1- <input type="text" name="number_1" id="number_1" /><br>
+				2- <input type="text" name="number_2" id="number_2" /><br>
+				3- <input type="text" name="number_3" id="number_3" /><br>
+				<button id="btn">Click!</button>
+				<div id="response"></div>
+		</section>
+	</body>
+	<script>
+		document.getElementById("btn").addEventListener("click", greater_than);
+
+		function greater_than() {	
+		    var a = document.getElementById("number_1").value;
+		    var b = document.getElementById("number_2").value;
+		    var c = document.getElementById("number_3").value;
+		    var i = 0;
+
+		    if (a == 0 || b == 0 || c == 0) 
+		        document.write("El producto es 0");
+		    else 
+		    {
+		        if (a < 0) 
+		            i++;
+		        if (b < 0) 
+		            i++;
+		        if (c < 0) 
+		            i++;
+		        if (i == 1 || i == 3) 
+		            document.write("el signo del producto es: -");
+		        else 
+		            document.write("el signo del producto es: +");
+		    }
+		}
+	</script>
+</html>

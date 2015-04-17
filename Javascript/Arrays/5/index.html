@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+       <strong>Unsorted array:</strong> 
+            <div id="UnsortedArray"></div><br>
+       <strong>Sorted array:</strong> 
+            <div id="SortedArray"></div><br>
+
+    </body>
+    <script type="text/javascript">
+
+        var arrayToSort = [8, 8, 99, 0, 7, 1, 1, 56, 22, 69, 10, 8, 62, 11, 2, 2, 2, 45, 121];
+
+        document.getElementById("UnsortedArray").innerHTML = " [" + arrayToSort + "]";
+
+
+        for (var i = 0; i < arrayToSort.length-1; i++) {
+            var ElementPos = i;
+            var Element = arrayToSort[i];
+            for (var k = i + 1; k < arrayToSort.length; k++) {
+                if (Element > arrayToSort[k]) {
+                    ElementPos = k;
+                    Element = arrayToSort[k];
+                }
+            }
+            var temp = arrayToSort[i];
+            arrayToSort[i] = arrayToSort[ElementPos];
+            arrayToSort[ElementPos] = temp;
+        }
+        document.getElementById("SortedArray").innerHTML = " [" + arrayToSort + "]";
+    </script>
+</html>

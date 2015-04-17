@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<ul id="response"></ul>
+	</body>
+	<script type="text/javascript">
+
+	    var numbers = new Array();
+	    for (var i = 0; i < 20; i++) {
+	        numbers[i] = i * 5;
+	        append("numbers[" + i + "] = " + numbers[i]);
+	    }
+
+	    function append(text) {
+		    var node = document.createElement("LI");
+		    var textnode = document.createTextNode(text);
+		    node.appendChild(textnode);
+		    document.getElementById("response").appendChild(node);
+		}
+		
+	</script>
+</html>

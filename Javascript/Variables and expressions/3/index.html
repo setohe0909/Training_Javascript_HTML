@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#response{
+				margin-top: 10px;
+				border: 1px solid #000;
+				width: 50%;
+				padding: 10px;
+			}
+		</style>
+	<body>
+		<section>
+			<fieldset>
+				<legend>Width</legend>
+					<strong>Enter a value:</strong>
+					<input type="text" id="Width" />
+			</fieldset>
+
+			<fieldset>
+				<legend>Height</legend>
+					<strong>Enter a value:</strong>
+					<input type="text" id="Height" />
+			</fieldset><br>
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", area);
+
+		function area() {
+			var area;
+			var Width  = document.getElementById("Width").value;
+		    var Height =  document.getElementById("Height").value;
+
+		    var area = Width * Height;
+
+			document.getElementById("response").innerHTML = "El are del rectangulo es: " + area;
+		}
+	</script>
+</html>

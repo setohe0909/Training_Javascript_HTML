@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <input type="text" id="number" />
+        <button id="btn">Click!</button>
+    
+    </body>
+    <script type="text/javascript">
+
+        document.getElementById("btn").addEventListener("click", OnClick);
+
+        function OnClick() {
+            var number = document.getElementById("number").value;
+            var l_number = parseInt(number.charAt(number.length - 1));
+
+            switch (l_number) 
+            {
+                case 1:
+                    l_number= "one";
+                    break;
+                case 2:
+                    l_number= "two";
+                    break;
+                case 3:
+                    l_number= "three";
+                    break;
+                case 4:
+                    l_number= "four";
+                    break;
+                case 5:
+                    l_number= "five";
+                    break;
+                case 6:
+                    l_number= "six";
+                    break;
+                case 7:
+                    l_number= "seven";
+                    break;
+                case 8:
+                    l_number= "eight";
+                    break;
+                case 9:
+                    l_number= "nine";
+                    break;
+                case 0:
+                    l_number= "zero";
+                    break;
+                default:
+                    l_number= "un valor invalido";
+                    break;
+            }
+
+            document.write( "El ultmimo numero de: " + number+ " es " + l_number);
+        }
+    </script>
+</html>

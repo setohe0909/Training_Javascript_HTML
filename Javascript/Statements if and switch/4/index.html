@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<section>
+			<strong>Enter a values:</strong><br>
+			1- <input type="text" name="number_1" id="number_1" /> <br> 
+			2- <input type="text" name="number_2" id="number_2" /> <br>
+			3- <input type="text" name="number_3" id="number_3" /> <br>
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+		
+	</body>
+	<script>
+		document.getElementById("btn").addEventListener("click", sortValue);
+
+		function sortValue(){	
+			    var a = document.getElementById("number_1").value//44.8;
+			    var b = document.getElementById("number_2").value//68.6;
+			    var c = document.getElementById("number_3").value//69;
+
+			    if (a == b && b == c) 
+			        document.write("Los 3 valores son iguales.");
+			    else {
+				        if (a > b && b > c) {
+				            document.write(a + " ");
+				            document.write(b + " ");
+				            document.write(c);
+				        }
+				        else if (a > c && c > b) {
+				            document.write(a + " ");
+				            document.write(c + " ");
+				            document.write(b);
+				        }
+				        else if (b > a && a > c) {
+				            document.write(b + " ");
+				            document.write(a + " ");
+				            document.write(c);
+				        }
+				        else if (b > c && c > a) {
+				            document.write(b + " ");
+				            document.write(c + " ");
+				            document.write(a);
+				        }
+				        else if (c > a && a > b) {
+				            document.write(c + " ");
+				            document.write(a + " ");
+				            document.write(b);
+				        }
+				        else {
+				            document.write(c + " ");
+				            document.write(b + " ");
+				            document.write(a);
+				        }
+			    }
+			}
+		</script>
+</html>

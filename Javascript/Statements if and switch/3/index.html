@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	<title></title>
+	<body>
+
+		<section>
+			<strong>Enter a values:</strong>
+			1- <input type="text" name="number_1" id="number_1" />
+			2- <input type="text" name="number_2" id="number_2" />
+			3- <input type="text" name="number_3" id="number_3" />
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", greater_than);
+
+		function greater_than() {
+			var one  = document.getElementById("number_1").value;
+			    var two = document.getElementById("number_2").value;
+			var three = document.getElementById("number_3").value;
+			var NumeroMayor = 0;
+			var number = [one, two, three];
+
+			for (var i = 0; i <= number.length; i++) {
+				if (parseInt(number[i]) > parseInt(NumeroMayor)){
+				   NumeroMayor = number[i];
+				} 
+			}
+			document.getElementById("response").innerHTML = "El número mayor es: " + NumeroMayor;
+		}
+	</script>
+</html>

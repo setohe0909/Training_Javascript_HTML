@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<section>
+		    <strong>Enter value:</strong><br>
+			<input type="text" id="number" /><br>
+			<button id="btn" onclick="onloop()">click!</button><br>
+			<div id="response"></div>
+	    </section>
+		
+	</body>
+	<script>
+	    function onloop() {
+	        var number = parseInt(document.getElementById("number").value);
+	        var result = "";
+
+	        for (var i = 1; i <=number; i++)
+	            result = result + " <br> " + i ;
+
+			document.getElementById("response").innerHTML = result;
+	    }
+		</script>
+</html>

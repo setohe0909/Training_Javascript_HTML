@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<body>
+
+		<section>
+			<strong>Enter a value:</strong>
+			<input type="text" id="number" />
+			<button id="btn">Click!</button>
+			<div id="response"></div>
+		</section>
+
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", third_digit_greater_than);
+
+		function third_digit_greater_than() {
+			var digit  = document.getElementById("number").value;
+			var a = isNaN(digit.value);
+			var b = digit > 0 && digit <= 100;
+
+			if (!(a == true && b == true))
+				document.getElementById("response").innerHTML = "Valor invalido";
+			else
+				prime(digit);
+		}
+
+		function prime(num) {
+
+			for (var i=0 ; i<num; i++) 
+			{
+				if (num % i == 0) 
+					document.getElementById("response").innerHTML = num + " no es primo, es divisible por " + i + ".";
+				if (num % i != 0) 
+					var prime="si";
+			}
+				
+			if (prime == "si") 
+				document.getElementById("response").innerHTML = num + " es primo.";
+		}
+	</script>
+</html>

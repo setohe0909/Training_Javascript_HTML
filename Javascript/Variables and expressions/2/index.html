@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<section>
+			<strong>Enter a number:</strong>
+			<input type="text" id="number" />
+			<button id="btn">Click!</button>
+		</section>
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", divider);
+
+		function divider() {
+			var text = "";
+		    var numero=  document.getElementById("number").value;
+		    var response_1 = numero%5 == 0;
+		    var response_2 = numero%7 == 0;
+
+		    if (response_1 == true)
+		    	text= "Es divisible por 5 ";
+
+  			if (response_2 == true)
+  				text= "Es divisible por 7";
+
+			document.write(text);
+		}
+	</script>
+</html>

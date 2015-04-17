@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Números pares y impares</title>
+	</head>
+	<body>
+		<section>
+			<strong>Enter a number:</strong>
+			<input type="text" id="number" />
+			<button id="btn">Click!</button>
+		</section>
+	</body>
+	<script type="text/javascript">
+	  document.getElementById("btn").addEventListener("click", Odd_Even);
+
+		function Odd_Even() {
+		    var numero=  document.getElementById("number").value;
+
+			  if (numero % 2 == 0)
+			    document.write('El numero introducido es par');
+			  else 
+			  	document.write('El numero introducido es impar');
+		}
+	</script>
+</html>
